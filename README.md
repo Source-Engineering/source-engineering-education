@@ -1,4 +1,4 @@
-# Source Engineering -- Education
+# Education
 
 > Curriculum and learning resources for the Source Engineering discipline.
 
@@ -6,10 +6,10 @@ This repository holds the discipline's educational surface. The curriculum is th
 
 ## What is in this repository
 
-- `curriculum.md` -- the learning path. Five units, each with a name, a duration, an exit criterion, and a reading list.
-- `tutorial-90-minutes.md` -- the 90-minute tutorial. A single guided session that produces a working COTS.
-- `glossary.md` -- the student-friendly glossary. Cross-references the foundations repo's `terminology.md` and the practice repo's `glossary.md`.
-- `learning-objectives.md` -- the discipline's learning objectives, by level (novice, practitioner, expert).
+- `curriculum.md` - the learning path. Five units, each with a name, a duration, an exit criterion, and a reading list.
+- `tutorial-90-minutes.md` - the 90-minute tutorial. A single guided session that produces a working COTS.
+- `glossary.md` - the student-friendly glossary. Cross-references the foundations repo's `terminology.md` and the practice repo's `glossary.md`.
+- `learning-objectives.md` - the discipline's learning objectives, by level (novice, practitioner, expert).
 
 ## How to engage
 
