@@ -77,6 +77,21 @@ The curriculum is for the reader who has decided the discipline is worth their t
 
 **Exit criterion.** You have run the e2e demonstration.
 
+## Unit 6 -- Recursive Evidence Chains (half week)
+
+**Question.** What happens when the evidence is itself a model output? How does a COTS avoid citing itself? What are `source_type` and `chain_termination`, and how does a reviewer read them?
+
+**Reading.**
+
+- RFC-0002 (recursive evidence chains) in `Source-Engineering/source-engineering-governance/RFC/0002-recursive-evidence-chains.md`.
+- `Source-Engineering/source-engineering-specifications/cots/README.md` -- Part 4, the RFC-0002 fields (COTS schema v1.2.0).
+- `Source-Engineering/source-engineering-practice/handbook/10-recursive-evidence-chains.md` -- how a reviewer reads a COTS with recursive evidence.
+- The 2026 legal-summarization case study's Q3.2 finding in `Source-Engineering/source-engineering-case-studies/2026-legal-summarization/` -- where the problem surfaced.
+
+**Assignment.** Take a conformant COTS. Mark one evidence item `model-generated`, declare `bounded_recursion` with a bound of 1, and run the conformance suite: observe the `recursive-evidence` warning (TC-RC-01). Then declare `terminal` and observe the failure (TC-RC-04). Run `se-trace recursive` on both. Write a short note: under which policy would you accept each COTS, and why?
+
+**Exit criterion.** You can explain why a structurally valid COTS can still cite itself, and how the RFC-0002 fields make that visible to a reviewer.
+
 ## Beyond the curriculum
 
 The curriculum is the discipline's growth path. Beyond the curriculum, the reader joins the discipline's community: the case studies, the practice handbook, the open questions, the RFCs, and the ADRs. The community is where the discipline grows; the curriculum is where the reader joins it.

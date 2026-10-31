@@ -16,3 +16,8 @@ All notable changes to the Source Engineering education repo are recorded here.
 
 - The curriculum is the discipline's growth path. The 90-minute tutorial is the first assignment in the first unit; the curriculum is the rest of the path.
 - The learning objectives are normative. A course that does not address the objectives is not a Source Engineering course.
+## [Unreleased]
+
+### Added
+
+- `curriculum.md` Unit 6: recursive evidence chains (RFC-0002) -- the self-citing COTS problem, the two fields, and a hands-on assignment with the conformance suite and `se-trace recursive`
