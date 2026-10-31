@@ -21,3 +21,7 @@ All notable changes to the Source Engineering education repo are recorded here.
 ### Added
 
 - `curriculum.md` Unit 6: recursive evidence chains (RFC-0002) -- the self-citing COTS problem, the two fields, and a hands-on assignment with the conformance suite and `se-trace recursive`
+
+### Added
+
+- `curriculum.md` Unit 7: business guardrails (RFC-0003) -- authoring binding/advisory/escalation rules, re-evaluating a producer's COTS against a peer's rule file, and the domain-expert rationale standard

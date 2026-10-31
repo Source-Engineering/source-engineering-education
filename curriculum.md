@@ -92,6 +92,21 @@ The curriculum is for the reader who has decided the discipline is worth their t
 
 **Exit criterion.** You can explain why a structurally valid COTS can still cite itself, and how the RFC-0002 fields make that visible to a reviewer.
 
+## Unit 7 -- Business Guardrails (half week)
+
+**Question.** How does the domain's policy become executable? What is a GuardrailDecision, what makes a rule binding or advisory, and how does a reviewer re-check a producer's rules?
+
+**Reading.**
+
+- RFC-0003 (Layer 3 business guardrails) in `Source-Engineering/source-engineering-governance/RFC/0003-layer3-guardrails-dsl.md`.
+- `Source-Engineering/source-engineering-specifications/cots/README.md` -- the GuardrailDecision field (COTS schema v1.3.0) and the rule grammar.
+- `Source-Engineering/source-engineering-practice/handbook/04-authoring-guardrails.md` -- authoring rules as a domain expert.
+- `Source-Engineering/source-engineering-practice/handbook/11-reading-a-guardrail-decision.md` -- reading the domain's ruling.
+
+**Assignment.** Author three rules for a domain you know: one binding rejection, one advisory annotation, one escalation. Run them against the reference implementation's example COTS with `se-trace check-guardrails --rules`. Then swap rule files with a peer and re-evaluate each other's COTS. Write a short note: which outcomes surprised you, and which rationale would a domain expert rewrite?
+
+**Exit criterion.** You can take a domain policy, express it as rules, and verify a producer's GuardrailDecisions against them.
+
 ## Beyond the curriculum
 
 The curriculum is the discipline's growth path. Beyond the curriculum, the reader joins the discipline's community: the case studies, the practice handbook, the open questions, the RFCs, and the ADRs. The community is where the discipline grows; the curriculum is where the reader joins it.
