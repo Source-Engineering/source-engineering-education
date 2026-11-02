@@ -8,7 +8,7 @@ The discipline's canonical terms are in `Source-Engineering/source-engineering-f
 
 **Answer** -> **DecisionRecord.** A COTS's persistent artefact that captures the decision.
 
-**Audit** -> **Audit trail.** The persistent record of who saw what response, when, with what evidence, and what they did with it.
+**Audit** -> **Audit trail.** The persistent record of who saw what response, when, with what evidence, and what they did with it. Append-only; replayed with `se-trace audit` (RFC-0005, Layer 4).
 
 ## B
 

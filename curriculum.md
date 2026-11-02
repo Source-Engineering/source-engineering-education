@@ -107,6 +107,21 @@ The curriculum is for the reader who has decided the discipline is worth their t
 
 **Exit criterion.** You can explain the difference between the context-engineering knobs (operator-side) and the surfaced context (user-side), and why RFC-0004 makes the latter a conformance requirement.
 
+## Unit 8 -- The Audit Trail (half week)
+
+**Question.** How does a reviewer reconstruct a decision's full lifecycle, and what makes the audit trail trustworthy? What does append-only actually guarantee?
+
+**Reading.**
+
+- RFC-0005 (Layer 4 audit trail floor) in `Source-Engineering/source-engineering-governance/RFC/0005-layer4-audit-trail.md`.
+- `Source-Engineering/source-engineering-architecture/layer-contracts/layer-4-audit-trail.md` -- the Layer 4 contract.
+- `Source-Engineering/source-engineering-practice/handbook/12-auditing-from-the-trail.md` -- the reviewer's five questions.
+- `Source-Engineering/source-engineering-reference-implementation/src/layer4/layer4.ts` -- the store and replay.
+
+**Assignment.** Take a conformant COTS. Append an `appealed` entry and a `rerun` entry with `rerun_of` linkage to its audit history; run `se-trace audit` and the conformance suite. Then duplicate an entry id and observe the TC-L4-02 failure and the `se-trace audit` exit 1. Write a short note: why is a rewritten log unable to support an appeal?
+
+**Exit criterion.** You can replay a decision's lifecycle from COTS + audit trail alone and state which TC-L4 case catches each kind of tampering.
+
 ## Beyond the curriculum
 
 The curriculum is the discipline's growth path. Beyond the curriculum, the reader joins the discipline's community: the case studies, the practice handbook, the open questions, the RFCs, and the ADRs. The community is where the discipline grows; the curriculum is where the reader joins it.
