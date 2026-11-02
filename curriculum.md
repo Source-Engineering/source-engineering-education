@@ -92,6 +92,21 @@ The curriculum is for the reader who has decided the discipline is worth their t
 
 **Exit criterion.** You can explain why a structurally valid COTS can still cite itself, and how the RFC-0002 fields make that visible to a reviewer.
 
+## Unit 7 -- Context Graph Surfacing (half week)
+
+**Question.** How does the user see the runtime context a decision was made under, not just the operator? What is the Context Graph, and what does "context surfaced" mean?
+
+**Reading.**
+
+- RFC-0004 (context graph surfacing) in `Source-Engineering/source-engineering-governance/RFC/0004-context-graph-surfacing.md`.
+- `Source-Engineering/source-engineering-specifications/cots/README.md` -- Part 2, the context surfacing contract.
+- `Source-Engineering/source-engineering-practice/handbook/11-context-graph.md` -- how a reviewer reads the Context Graph.
+- `Source-Engineering/source-engineering-research/agenda.md` -- Q2.2 and Q4.2, closed by RFC-0004.
+
+**Assignment.** Take a conformant COTS and run `se-trace context-graph <cots.json> -o ./out`. Open the HTML. Verify every parameter appears as a node with a `set-by` edge and every decision carries `contextualises` edges. Then remove `temperature` from the COTS and run the conformance suite: observe the TC-CG-01 failure. Write a short note: what does the graph let a reviewer ask that raw JSON does not?
+
+**Exit criterion.** You can explain the difference between the context-engineering knobs (operator-side) and the surfaced context (user-side), and why RFC-0004 makes the latter a conformance requirement.
+
 ## Beyond the curriculum
 
 The curriculum is the discipline's growth path. Beyond the curriculum, the reader joins the discipline's community: the case studies, the practice handbook, the open questions, the RFCs, and the ADRs. The community is where the discipline grows; the curriculum is where the reader joins it.

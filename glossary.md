@@ -48,6 +48,8 @@ The discipline's canonical terms are in `Source-Engineering/source-engineering-f
 
 **Graph** -> **Reasoning Roadmap.** A Mermaid + HTML rendering of a COTS that shows the sources, the claims, and the decision.
 
+**Context Graph** -> **Context Graph.** A Mermaid + HTML rendering of a COTS's Context + Evidence parts: parameters, constraints, sources, claims, and decisions connected by typed edges (`set-by`, `constrains`, `contextualises`, `supports`, `contradicts`). Produced by `se-trace context-graph` (RFC-0004).
+
 ## H
 
 **Hesitation** -> **Hesitation factor.** The reluctance to act on a model's answer because the user cannot verify its reasoning in time.
