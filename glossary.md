@@ -8,7 +8,7 @@ The discipline's canonical terms are in `Source-Engineering/source-engineering-f
 
 **Answer** -> **DecisionRecord.** A COTS's persistent artefact that captures the decision.
 
-**Audit** -> **Audit trail.** The persistent record of who saw what response, when, with what evidence, and what they did with it.
+**Audit** -> **Audit trail.** The persistent record of who saw what response, when, with what evidence, and what they did with it. Append-only; replayed with `se-trace audit` (RFC-0005, Layer 4).
 
 ## B
 
@@ -47,6 +47,8 @@ The discipline's canonical terms are in `Source-Engineering/source-engineering-f
 ## G
 
 **Graph** -> **Reasoning Roadmap.** A Mermaid + HTML rendering of a COTS that shows the sources, the claims, and the decision.
+
+**Context Graph** -> **Context Graph.** A Mermaid + HTML rendering of a COTS's Context + Evidence parts: parameters, constraints, sources, claims, and decisions connected by typed edges (`set-by`, `constrains`, `contextualises`, `supports`, `contradicts`). Produced by `se-trace context-graph` (RFC-0004).
 
 ## H
 

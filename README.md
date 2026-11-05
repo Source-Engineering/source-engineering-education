@@ -7,13 +7,14 @@ This repository holds the discipline's educational surface. The curriculum is th
 ## What is in this repository
 
 - `curriculum.md` - the learning path. Five units, each with a name, a duration, an exit criterion, and a reading list.
+- `quickstart-15-minutes.md` - the 15-minute adopter quickstart. One command (`bash scripts/quickstart.sh` in the tools repo) from zero to a validated COTS and an Explorer page.
 - `tutorial-90-minutes.md` - the 90-minute tutorial. A single guided session that produces a working COTS.
 - `glossary.md` - the student-friendly glossary. Cross-references the foundations repo's `terminology.md` and the practice repo's `glossary.md`.
 - `learning-objectives.md` - the discipline's learning objectives, by level (novice, practitioner, expert).
 
 ## How to engage
 
-- **New to the discipline?** Start at `tutorial-90-minutes.md`. 90 minutes later, you will have produced and validated a COTS.
+- **New to the discipline?** Start at `quickstart-15-minutes.md` (15 minutes to a validated COTS), then `tutorial-90-minutes.md`. 90 minutes later, you will have produced and validated a COTS.
 - **Adopting the discipline?** Read `curriculum.md` for the full learning path. The path is sequenced: do not skip the early units.
 - **Teaching the discipline?** Use `learning-objectives.md` to design a course. The objectives are normative; the assignments are examples.
 
