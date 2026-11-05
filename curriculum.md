@@ -92,35 +92,20 @@ The curriculum is for the reader who has decided the discipline is worth their t
 
 **Exit criterion.** You can explain why a structurally valid COTS can still cite itself, and how the RFC-0002 fields make that visible to a reviewer.
 
-## Unit 7 -- Context Graph Surfacing (half week)
+## Unit 7 -- Business Guardrails (half week)
 
-**Question.** How does the user see the runtime context a decision was made under, not just the operator? What is the Context Graph, and what does "context surfaced" mean?
-
-**Reading.**
-
-- RFC-0004 (context graph surfacing) in `Source-Engineering/source-engineering-governance/RFC/0004-context-graph-surfacing.md`.
-- `Source-Engineering/source-engineering-specifications/cots/README.md` -- Part 2, the context surfacing contract.
-- `Source-Engineering/source-engineering-practice/handbook/11-context-graph.md` -- how a reviewer reads the Context Graph.
-- `Source-Engineering/source-engineering-research/agenda.md` -- Q2.2 and Q4.2, closed by RFC-0004.
-
-**Assignment.** Take a conformant COTS and run `se-trace context-graph <cots.json> -o ./out`. Open the HTML. Verify every parameter appears as a node with a `set-by` edge and every decision carries `contextualises` edges. Then remove `temperature` from the COTS and run the conformance suite: observe the TC-CG-01 failure. Write a short note: what does the graph let a reviewer ask that raw JSON does not?
-
-**Exit criterion.** You can explain the difference between the context-engineering knobs (operator-side) and the surfaced context (user-side), and why RFC-0004 makes the latter a conformance requirement.
-
-## Unit 8 -- The Audit Trail (half week)
-
-**Question.** How does a reviewer reconstruct a decision's full lifecycle, and what makes the audit trail trustworthy? What does append-only actually guarantee?
+**Question.** How does the domain's policy become executable? What is a GuardrailDecision, what makes a rule binding or advisory, and how does a reviewer re-check a producer's rules?
 
 **Reading.**
 
-- RFC-0005 (Layer 4 audit trail floor) in `Source-Engineering/source-engineering-governance/RFC/0005-layer4-audit-trail.md`.
-- `Source-Engineering/source-engineering-architecture/layer-contracts/layer-4-audit-trail.md` -- the Layer 4 contract.
-- `Source-Engineering/source-engineering-practice/handbook/12-auditing-from-the-trail.md` -- the reviewer's five questions.
-- `Source-Engineering/source-engineering-reference-implementation/src/layer4/layer4.ts` -- the store and replay.
+- RFC-0003 (Layer 3 business guardrails) in `Source-Engineering/source-engineering-governance/RFC/0003-layer3-guardrails-dsl.md`.
+- `Source-Engineering/source-engineering-specifications/cots/README.md` -- the GuardrailDecision field (COTS schema v1.3.0) and the rule grammar.
+- `Source-Engineering/source-engineering-practice/handbook/04-authoring-guardrails.md` -- authoring rules as a domain expert.
+- `Source-Engineering/source-engineering-practice/handbook/11-reading-a-guardrail-decision.md` -- reading the domain's ruling.
 
-**Assignment.** Take a conformant COTS. Append an `appealed` entry and a `rerun` entry with `rerun_of` linkage to its audit history; run `se-trace audit` and the conformance suite. Then duplicate an entry id and observe the TC-L4-02 failure and the `se-trace audit` exit 1. Write a short note: why is a rewritten log unable to support an appeal?
+**Assignment.** Author three rules for a domain you know: one binding rejection, one advisory annotation, one escalation. Run them against the reference implementation's example COTS with `se-trace check-guardrails --rules`. Then swap rule files with a peer and re-evaluate each other's COTS. Write a short note: which outcomes surprised you, and which rationale would a domain expert rewrite?
 
-**Exit criterion.** You can replay a decision's lifecycle from COTS + audit trail alone and state which TC-L4 case catches each kind of tampering.
+**Exit criterion.** You can take a domain policy, express it as rules, and verify a producer's GuardrailDecisions against them.
 
 ## Beyond the curriculum
 
